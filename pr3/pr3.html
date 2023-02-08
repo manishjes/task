@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chessboard</title>
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: auto;
+        margin-top: 70px;
+      }
+
+      #chessboard {
+        width: 800px;
+        height: 800px;
+        border: 2px solid black;
+        margin: auto;
+      }
+      .chess-box1 {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+      .chess-box2 {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+      }
+
+      @media screen and (max-width: 900px) {
+        #chessboard {
+          width: 640px;
+          height: 640px;
+          border: 2px solid black;
+          margin: auto;
+        }
+        .chess-box1 {
+          float: left;
+          width: 80px;
+          height: 80px;
+          background-color: black;
+        }
+        .chess-box2 {
+          float: left;
+          width: 80px;
+          height: 80px;
+          background-color: white;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #chessboard {
+          width: 480px;
+          height: 480px;
+          border: 2px solid black;
+          margin: auto;
+        }
+        .chess-box1 {
+          float: left;
+          width: 60px;
+          height: 60px;
+          background-color: black;
+        }
+        .chess-box2 {
+          float: left;
+          width: 60px;
+          height: 60px;
+          background-color: white;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        #chessboard {
+          width: 320px;
+          height: 320px;
+          border: 2px solid black;
+          margin: auto;
+        }
+        .chess-box1 {
+          float: left;
+          width: 40px;
+          height: 40px;
+          background-color: black;
+        }
+        .chess-box2 {
+          float: left;
+          width: 40px;
+          height: 40px;
+          background-color: white;
+        }
+      } -->
+    <!-- </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="chessboard"></div>
+    </div>
+    <script>
+      var board = document.getElementById("chessboard");
+
+      for (i = 0; i < 8; i++) {
+        for (j = 0; j < 8; j++) {
+          if ((i + j) % 2 == 0) {
+            var chess = document.createElement("div");
+            chess.className = "chess-box1";
+          } else {
+            var chess = document.createElement("div");
+            chess.className = "chess-box2";
+          }
+          board.appendChild(chess);
+        }
+        document.write("<br/>");
+        
+      }
+    </script>
+  </body>
+</html>
